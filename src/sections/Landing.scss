@@ -63,38 +63,6 @@
     margin-top: 6px;
   }
 
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 15px 26px;
-    background: var(--accent);
-    color: var(--on-accent);
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    text-decoration: none;
-    border: 1px solid var(--accent);
-
-    &:hover {
-      background: var(--accent-hover);
-      border-color: var(--accent-hover);
-    }
-  }
-
-  .btn-outline {
-    background: transparent;
-    color: var(--text-h);
-    border-color: var(--border-strong);
-
-    &:hover {
-      background: transparent;
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-  }
-
   .landing-stats {
     list-style: none;
     padding: 0;

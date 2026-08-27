@@ -24,20 +24,6 @@ header {
     color: var(--accent);
   }
 
-  .call-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 10px 18px;
-    background: var(--accent);
-    color: var(--on-accent);
-
-    &:hover {
-      background: var(--accent-hover);
-      color: var(--on-accent);
-    }
-  }
-
   nav {
     display: flex;
     align-items: center;

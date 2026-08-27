@@ -1,4 +1,5 @@
 import HeroImage from "../assets/hero.jpeg";
+import { Button } from "../ui/Button";
 import "./Landing.scss";
 
 const stats = [
@@ -25,12 +26,10 @@ export const Landing = () => {
             installed by a specialist with over twenty years on the tools.
           </p>
           <div className="landing-actions">
-            <a href="/#contact" className="btn">
-              Request a Free Quote
-            </a>
-            <a href="/#gallery" className="btn btn-outline">
+            <Button href="/#contact">Request a Free Quote</Button>
+            <Button variant="secondary" href="/#gallery">
               View Gallery
-            </a>
+            </Button>
           </div>
           <ul className="landing-stats">
             {stats.map((stat) => (

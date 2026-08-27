@@ -1,3 +1,4 @@
+import { Button } from "../ui/Button";
 import { Icon } from "../ui/Icon";
 import { Logo } from "../ui/Logo";
 import "./Header.scss";
@@ -20,10 +21,10 @@ export const Header = () => {
               {item.name}
             </a>
           ))}
-          <a className="call-btn" href="tel:07359252329">
+          <Button href="tel:07359252329">
             <Icon.Call />
             Call 07359252329
-          </a>
+          </Button>
         </nav>
       </div>
     </header>
