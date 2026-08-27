@@ -1,0 +1,23 @@
+import "./Header.scss";
+
+const navItems = [
+  { name: "Services", href: "/#services" },
+  { name: "Gallery", href: "/#gallery" },
+  { name: "Why Us", href: "/#why-us" },
+  { name: "Contact", href: "/#contact" },
+];
+
+export const Header = () => {
+  return (
+    <header>
+      <nav>
+        {navItems.map((item) => (
+          <a key={item.name} href={item.href}>
+            {item.name}
+          </a>
+        ))}
+        <a href="tel:07359252329">Call 07359252329</a>
+      </nav>
+    </header>
+  );
+};

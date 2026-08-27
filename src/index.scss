@@ -1,0 +1,77 @@
+:root {
+  /* text */
+  --text: #5b5954;
+  --text-h: #201f1d;
+  --text-dim: #8a949e;
+  --on-accent: #ffffff;
+
+  /* surfaces */
+  --bg: #f3f2f2;
+  --surface: #ffffff;
+  --surface-2: #eae9e7;
+  --surface-dark: #1a1a1a;
+  --code-bg: #eae9e7;
+
+  /* lines */
+  --border: #dedbd6;
+  --border-strong: #b4afa7;
+
+  --accent: #1d6fb8;
+  --accent-deep: #0f5c9e;
+  --accent-grad: linear-gradient(180deg, #1d6fb8, #0f5c9e);
+  --accent-bg: rgba(29, 111, 184, 0.08);
+  --accent-border: rgba(29, 111, 184, 0.45);
+  --accent-hover: #17629f;
+
+  --whatsapp: #1faa54;
+
+  --sans: Barlow, system-ui, sans-serif;
+  --heading: Oswald, Barlow, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+  --heading-weight: 500;
+  --tracking-caps: 0.18em;
+
+  /* shape + depth */
+  --radius: 0px;
+  --shadow: 0 18px 44px rgba(32, 31, 29, 0.12);
+  --shadow-sm: 0 2px 10px rgba(32, 31, 29, 0.07);
+
+  font: 17px/1.6 var(--sans);
+  letter-spacing: 0;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+#root {
+  // width: 1700px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+p {
+  margin: 0;
+}
