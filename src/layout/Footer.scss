@@ -5,13 +5,16 @@ footer {
 
 .footer-inner {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1600px;
+  margin: 0 auto;
   gap: 64px;
   padding: 48px;
+  box-sizing: border-box;
 }
 
 .footer-about {
-  flex: 1;
-
   .logo {
     margin-bottom: 20px;
   }
@@ -22,8 +25,6 @@ footer {
 }
 
 .footer-col {
-  flex: 1;
-
   h2 {
     font-size: 14px;
     text-transform: uppercase;

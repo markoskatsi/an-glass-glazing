@@ -12,18 +12,20 @@ const navItems = [
 export const Header = () => {
   return (
     <header>
-      <Logo />
-      <nav>
-        {navItems.map((item) => (
-          <a key={item.name} href={item.href}>
-            {item.name}
+      <div className="header-inner">
+        <Logo />
+        <nav>
+          {navItems.map((item) => (
+            <a key={item.name} href={item.href}>
+              {item.name}
+            </a>
+          ))}
+          <a className="call-btn" href="tel:07359252329">
+            <Icon.Call />
+            Call 07359252329
           </a>
-        ))}
-        <a className="call-btn" href="tel:07359252329">
-          <Icon.Call />
-          Call 07359252329
-        </a>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 };
