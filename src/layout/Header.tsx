@@ -1,3 +1,4 @@
+import { Logo } from "../ui/Logo";
 import "./Header.scss";
 
 const navItems = [
@@ -10,6 +11,7 @@ const navItems = [
 export const Header = () => {
   return (
     <header>
+      <Logo />
       <nav>
         {navItems.map((item) => (
           <a key={item.name} href={item.href}>

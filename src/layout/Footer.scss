@@ -1,3 +1,73 @@
-.footer-text {
-  color: var(--text-h);
+footer {
+  border-top: 1px solid var(--border);
+  text-align: left;
+}
+
+.footer-inner {
+  display: flex;
+  gap: 64px;
+  padding: 48px;
+}
+
+.footer-about {
+  flex: 1;
+
+  .logo {
+    margin-bottom: 20px;
+  }
+}
+
+.footer-col {
+  flex: 1;
+
+  h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+    color: var(--text-h);
+    margin-bottom: 24px;
+  }
+}
+
+.footer-services {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  columns: 2;
+
+  li {
+    margin-bottom: 16px;
+    padding-left: 18px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+  }
+}
+
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
 }
