@@ -18,7 +18,9 @@ export const Header = () => {
             {item.name}
           </a>
         ))}
-        <a href="tel:07359252329">Call 07359252329</a>
+        <a className="call-btn" href="tel:07359252329">
+          Call 07359252329
+        </a>
       </nav>
     </header>
   );

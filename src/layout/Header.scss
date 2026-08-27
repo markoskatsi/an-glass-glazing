@@ -18,6 +18,17 @@ header {
     color: var(--accent);
   }
 
+  .call-btn {
+    padding: 10px 18px;
+    background: var(--accent);
+    color: var(--on-accent);
+
+    &:hover {
+      background: var(--accent-hover);
+      color: var(--on-accent);
+    }
+  }
+
   nav {
     display: flex;
     align-items: center;
