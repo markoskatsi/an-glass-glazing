@@ -15,6 +15,10 @@ footer {
   .logo {
     margin-bottom: 20px;
   }
+
+  .footer-text {
+    max-width: 280px;
+  }
 }
 
 .footer-col {
@@ -44,9 +48,10 @@ footer {
       content: "";
       position: absolute;
       left: 0;
-      top: 0.5em;
-      width: 6px;
-      height: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
       border-radius: 50%;
       background: var(--accent);
     }
@@ -59,15 +64,23 @@ footer {
   margin: 0;
 
   li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 20px;
   }
 
-  a {
-    color: var(--text);
-    text-decoration: none;
+  svg {
+    color: var(--accent);
+  }
 
-    &:hover {
-      color: var(--accent);
-    }
+  a,
+  span {
+    color: var(--text-accent);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--accent);
   }
 }
