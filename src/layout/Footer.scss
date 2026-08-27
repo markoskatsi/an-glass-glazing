@@ -81,7 +81,10 @@ footer {
     text-decoration: none;
   }
 
-  a:hover {
+  a {
     color: var(--accent);
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

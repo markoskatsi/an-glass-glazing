@@ -1,0 +1,139 @@
+.landing {
+  text-align: left;
+
+  .landing-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 72px 28px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 72px;
+  }
+
+  .landing-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-caps);
+
+    &::before {
+      content: "";
+      width: 2px;
+      height: 14px;
+      background: var(--accent);
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-family: var(--heading);
+    font-size: 53px;
+    line-height: 1.05;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-h);
+
+    span {
+      color: var(--accent);
+    }
+  }
+
+  p {
+    max-width: 34em;
+    color: var(--text);
+  }
+
+  .landing-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 6px;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 15px 26px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border: 1px solid var(--accent);
+
+    &:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text-h);
+    border-color: var(--border-strong);
+
+    &:hover {
+      background: transparent;
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+  }
+
+  .landing-stats {
+    list-style: none;
+    padding: 0;
+    margin: 22px 0 0;
+    display: flex;
+    gap: 56px;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    strong {
+      font-family: var(--heading);
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 1;
+      color: var(--text-h);
+    }
+
+    span {
+      font-size: 11px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-dim);
+    }
+  }
+
+  .landing-media {
+    flex: 1;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+  }
+}
