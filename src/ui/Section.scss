@@ -1,15 +1,15 @@
-.gallery {
+.section {
   text-align: left;
   border-top: 1px solid var(--border);
 
-  .gallery-inner {
+  .section-inner {
     max-width: 1600px;
     margin: 0 auto;
     padding: 72px 28px;
     box-sizing: border-box;
   }
 
-  .gallery-head {
+  .section-head {
     display: flex;
     align-items: center;
     justify-content: space-between;
