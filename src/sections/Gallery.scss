@@ -1,0 +1,46 @@
+.gallery-link {
+  display: flex;
+  width: fit-content;
+  margin: -60px 0 40px auto;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  white-space: nowrap;
+  transition: color 0.18s ease;
+
+  svg {
+    transition: transform 0.18s ease;
+  }
+
+  &:hover {
+    color: var(--accent);
+
+    svg {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.gallery-grid {
+  .cs-rigg-image {
+    display: block;
+    aspect-ratio: 6 / 4;
+    object-fit: cover;
+    background: var(--surface-2);
+    transition: transform 0.5s ease;
+  }
+
+  .cs-rigg-image-caption {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
+  }
+}
