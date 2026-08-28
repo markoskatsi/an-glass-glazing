@@ -1,5 +1,5 @@
 import HeroImage from "../assets/hero.jpeg";
-import { Button } from "../ui/Button";
+import { Button, ButtonTray } from "../ui/Button";
 import "./Landing.scss";
 
 const stats = [
@@ -18,19 +18,19 @@ export const Landing = () => {
           </span>
           <h1>
             Quality you can see, <br />
-            <span>services you can trust</span>
+            <span>service you can trust</span>
           </h1>
           <p>
             From misted double-glazed units and broken panes to frameless
             balustrades and walk-in shower glass - surveyed, made to size and
             installed by a specialist with over twenty years on the tools.
           </p>
-          <div className="landing-actions">
+          <ButtonTray>
             <Button href="/#contact">Request a Free Quote</Button>
             <Button variant="secondary" href="/#gallery">
               View Gallery
             </Button>
-          </div>
+          </ButtonTray>
           <ul className="landing-stats">
             {stats.map((stat) => (
               <li key={stat.label}>

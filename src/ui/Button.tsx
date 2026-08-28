@@ -13,8 +13,8 @@ export const Button = ({
     <a
       className={`btn ${variant}`}
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={!href ? "_blank" : undefined}
+      rel={!href ? "noopener noreferrer" : undefined}
     >
       {children}
     </a>
