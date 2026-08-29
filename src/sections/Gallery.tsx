@@ -4,6 +4,8 @@ import seaView from "../assets/jobs/sea-view-balustrade.jpg";
 import veranda from "../assets/jobs/glass-veranda.jpg";
 import splashback from "../assets/jobs/orange-splashback.jpg";
 import shower from "../assets/jobs/walk-in-shower.jpg";
+import stadiumBalustrade from "../assets/jobs/stadium-glass-balustrade.jpeg";
+import gardenBalustrade from "../assets/jobs/garden-glass-balustrade.jpeg";
 import { Section } from "../ui/Section";
 import { Icon } from "../ui/Icon";
 import { ImageGallery } from "react-image-grid-gallery";
@@ -12,10 +14,16 @@ import "./Gallery.scss";
 
 const jobs = [
   {
-    id: staircase,
-    src: staircase,
-    caption: "Frameless glass staircase",
-    alt: "Frameless glass balustrade on a floating glass staircase",
+    id: stadiumBalustrade,
+    src: stadiumBalustrade,
+    caption: "Stadium glass balustrade",
+    alt: "Frameless glass balustrade dividing seating rows in a football stadium stand",
+  },
+  {
+    id: gardenBalustrade,
+    src: gardenBalustrade,
+    caption: "Garden glass balustrade",
+    alt: "Frameless glass balustrade in a garden setting",
   },
   {
     id: balustradeStairs,
@@ -24,16 +32,22 @@ const jobs = [
     alt: "Curved glass balustrade running down a stone staircase",
   },
   {
-    id: seaView,
-    src: seaView,
-    caption: "Sea-view balustrade",
-    alt: "Frameless glass terrace balustrade overlooking the sea",
+    id: staircase,
+    src: staircase,
+    caption: "Frameless glass staircase",
+    alt: "Frameless glass balustrade on a floating glass staircase",
   },
   {
     id: veranda,
     src: veranda,
     caption: "Glass veranda enclosure",
     alt: "Glass-enclosed veranda with a sea view",
+  },
+  {
+    id: seaView,
+    src: seaView,
+    caption: "Sea-view balustrade",
+    alt: "Frameless glass terrace balustrade overlooking the sea",
   },
   {
     id: splashback,
@@ -62,11 +76,7 @@ export const Gallery = () => {
         <Icon.ArrowRight />
       </a>
       <div className="gallery-grid">
-        <ImageGallery
-          imagesData={jobs}
-          columnCount={3}
-          gapSize={16}
-        />
+        <ImageGallery imagesData={jobs} columnCount={3} gapSize={16} />
       </div>
     </Section>
   );
