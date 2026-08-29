@@ -11,6 +11,7 @@ import { Icon } from "../ui/Icon";
 import { ImageGallery } from "react-image-grid-gallery";
 import "react-image-grid-gallery/style.css";
 import "./Gallery.scss";
+import { useState } from "react";
 
 const jobs = [
   {
@@ -26,10 +27,10 @@ const jobs = [
     alt: "Frameless glass balustrade in a garden setting",
   },
   {
-    id: balustradeStairs,
-    src: balustradeStairs,
-    caption: "Curved glass balustrade",
-    alt: "Curved glass balustrade running down a stone staircase",
+    id: shower,
+    src: shower,
+    caption: "Walk-in shower enclosure",
+    alt: "Frameless walk-in shower enclosure with sliding glass doors",
   },
   {
     id: staircase,
@@ -64,6 +65,8 @@ const jobs = [
 ];
 
 export const Gallery = () => {
+  const [offset, setOffset] = useState(0);
+  const currentJobs = jobs.slice(offset, offset + 6);
   return (
     <Section id="gallery" eyebrow="Recent Jobs" title="Gallery">
       <a
@@ -76,7 +79,23 @@ export const Gallery = () => {
         <Icon.ArrowRight />
       </a>
       <div className="gallery-grid">
-        <ImageGallery imagesData={jobs} columnCount={3} gapSize={16} />
+        <ImageGallery imagesData={currentJobs} columnCount={3} gapSize={16} />
+        {offset > 0 && (
+          <button
+            className="gallery-button"
+            onClick={() => setOffset(Math.max(offset - 6, 0))}
+          >
+            <Icon.ReturnLeft />
+            Show Less
+          </button>
+        )}
+        <button
+          className="gallery-button"
+          onClick={() => setOffset(offset + 6)}
+        >
+          Show More
+          <Icon.ReturnRight />
+        </button>
       </div>
     </Section>
   );

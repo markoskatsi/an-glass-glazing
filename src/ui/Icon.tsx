@@ -2,6 +2,8 @@ import { IoCallOutline } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
 import { IoLocationOutline } from "react-icons/io5";
 import { FaHandPointRight } from "react-icons/fa";
+import { IoMdReturnLeft } from "react-icons/io";
+import { IoMdReturnRight } from "react-icons/io";
 
 export const Icon = ({ children }: { children: React.ReactNode }) => {
   return <div className="icon">{children}</div>;
@@ -23,7 +25,17 @@ function ArrowRight() {
   return <FaHandPointRight size={19} />;
 }
 
+function ReturnLeft() {
+  return <IoMdReturnLeft size={19} />;
+}
+
+function ReturnRight() {
+  return <IoMdReturnRight size={19} />;
+}
+
 Icon.Call = Call;
 Icon.Mail = Mail;
 Icon.Location = Location;
 Icon.ArrowRight = ArrowRight;
+Icon.ReturnLeft = ReturnLeft;
+Icon.ReturnRight = ReturnRight;
