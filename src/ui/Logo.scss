@@ -3,4 +3,10 @@
   height: 80px;
   width: auto;
   background: #000;
+  cursor: pointer;
+  transition: transform 0.26s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }

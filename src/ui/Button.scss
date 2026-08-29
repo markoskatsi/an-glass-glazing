@@ -1,3 +1,18 @@
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .btn-tray {
   display: flex;
   flex-wrap: wrap;
@@ -16,6 +31,10 @@
   letter-spacing: 0.06em;
   text-decoration: none;
   border: 1px solid var(--accent);
+
+  &:hover svg {
+    animation: wiggle 0.5s ease-in-out infinite;
+  }
 
   &.primary {
     background: var(--accent);
