@@ -1,19 +1,7 @@
 import { Logo } from "../ui/Logo";
 import { Icon } from "../ui/Icon";
+import { services } from "../data/services";
 import "./Footer.scss";
-
-const services = [
-  "Double glazed units",
-  "Balustrades",
-  "Safety & laminated glass",
-  "Splashbacks",
-  "Locksmith services",
-  "Misted window replacement",
-  "Walk-in bathroom glass",
-  "Mirrors supplied & fitted",
-  "Hinges & repairs",
-  "Cat flaps installed",
-];
 
 export const Footer = () => {
   return (
@@ -32,7 +20,7 @@ export const Footer = () => {
           <h2>Our Services</h2>
           <ul className="footer-services">
             {services.map((service) => (
-              <li key={service}>{service}</li>
+              <li key={service.name}>{service.name}</li>
             ))}
           </ul>
         </div>
