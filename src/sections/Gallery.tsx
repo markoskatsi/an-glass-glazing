@@ -9,6 +9,7 @@ import gardenBalustrade from "../assets/jobs/garden-glass-balustrade.jpeg";
 import { Section } from "../ui/Section";
 import { Icon } from "../ui/Icon";
 import { ImageGallery } from "react-image-grid-gallery";
+import { Button } from "../ui/Button";
 import "react-image-grid-gallery/style.css";
 import "./Gallery.scss";
 import { useState } from "react";
@@ -57,10 +58,10 @@ const jobs = [
     alt: "Orange toughened glass splashback wall panel",
   },
   {
-    id: shower,
-    src: shower,
-    caption: "Walk-in shower enclosure",
-    alt: "Frameless walk-in shower enclosure with sliding glass doors",
+    id: balustradeStairs,
+    src: balustradeStairs,
+    caption: "Glass balustrade on stairs",
+    alt: "Frameless glass balustrade on a set of stairs",
   },
 ];
 
@@ -81,21 +82,25 @@ export const Gallery = () => {
       <div className="gallery-grid">
         <ImageGallery imagesData={currentJobs} columnCount={3} gapSize={16} />
         {offset > 0 && (
-          <button
-            className="gallery-button"
+          <Button
+            variant="secondary"
             onClick={() => setOffset(Math.max(offset - 6, 0))}
+            href="#gallery"
           >
             <Icon.ReturnLeft />
             Show Less
-          </button>
+          </Button>
         )}
-        <button
-          className="gallery-button"
-          onClick={() => setOffset(offset + 6)}
-        >
-          Show More
-          <Icon.ReturnRight />
-        </button>
+        {offset + 6 < jobs.length && (
+          <Button
+            variant="secondary"
+            onClick={() => setOffset(offset + 6)}
+            href="#gallery"
+          >
+            Show More
+            <Icon.ReturnRight />
+          </Button>
+        )}
       </div>
     </Section>
   );

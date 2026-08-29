@@ -28,6 +28,11 @@
 }
 
 .gallery-grid {
+  container-type: inline-size;
+  > div {
+    min-height: calc((100cqw - 32px) * 4 / 9 + 32px);
+  }
+
   .cs-rigg-image {
     display: block;
     aspect-ratio: 6 / 4;
