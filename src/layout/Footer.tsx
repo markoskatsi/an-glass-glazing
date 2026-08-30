@@ -10,7 +10,7 @@ export const Footer = () => {
         <div className="footer-about">
           <Logo />
           <p className="footer-text">
-            A family run business. Glass and glazing specialists with over
+            A family run business. Glass and glazing specialist with over
             twenty years' experience. Supplied and fitted, domestic and
             commercial, across the UK.
           </p>
