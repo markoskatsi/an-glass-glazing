@@ -3,8 +3,7 @@ import { services } from "../../data/services";
 
 export interface ContactRecord extends Record<string, unknown> {
   name: string;
-  email: string;
-  phone?: number;
+  phone?: string;
   postcode?: string;
   service?: string;
   details: string;
@@ -12,8 +11,7 @@ export interface ContactRecord extends Record<string, unknown> {
 
 const emptyContact: ContactRecord = {
   name: "",
-  email: "",
-  phone: undefined,
+  phone: "",
   postcode: "",
   service: "",
   details: "",
@@ -33,18 +31,21 @@ export const ContactForm = ({
   const validation = {
     isValid: {
       name: (v: unknown) => typeof v === "string" && v.length > 2,
-      email: (v: unknown) =>
-        typeof v === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
-      phone: (v: unknown) => typeof v === "number" && v.toString().length >= 10,
+      phone: (v: unknown) => {
+        if (typeof v !== "string") return false;
+        const digits = v.replace(/\D/g, "").replace(/^(?:0044|44)/, "0");
+        return /^0\d{9,10}$/.test(digits);
+      },
       postcode: (v: unknown) => typeof v === "string" && v.length > 2,
       details: (v: unknown) => typeof v === "string" && v.length > 2,
+      service: (v: unknown) => typeof v === "string" && v.length > 0,
     },
     errorMessage: {
       name: "Please provide a valid name",
-      email: "Please provide a valid email address",
       phone: "Please provide a valid phone number",
       postcode: "Please provide a valid postcode",
       details: "Please provide some details about your enquiry",
+      service: "Please select a service",
     },
   };
 
@@ -63,17 +64,6 @@ export const ContactForm = ({
           name="name"
           id="name"
           value={contact.name}
-          onChange={handleChange}
-        />
-      </Form.Item>
-
-      <Form.Item label="Email" htmlFor="email" error={errors.email}>
-        <input
-          className="FormInput"
-          type="text"
-          name="email"
-          id="email"
-          value={contact.email}
           onChange={handleChange}
         />
       </Form.Item>
@@ -100,16 +90,17 @@ export const ContactForm = ({
         />
       </Form.Item>
 
-      <Form.Item label="Service" htmlFor="service">
+      <Form.Item label="Service" htmlFor="service" error={errors.service}>
         <select
           className="FormInput"
           name="service"
           id="service"
           value={contact.service}
-          defaultValue=""
           onChange={handleChange}
         >
-          <option value="">Select a service</option>
+          <option value="" disabled>
+            Select a service
+          </option>
           {services.map((service) => (
             <option key={service.name} value={service.name}>
               {service.name}

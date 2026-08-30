@@ -1,0 +1,102 @@
+.Form {
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.FormTray {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+
+  > .FormItem:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.FormItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.FormLabel {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caps);
+  color: var(--text-dim);
+}
+
+.FormInput {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--text-h);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  &::placeholder {
+    color: var(--text-dim);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+}
+
+textarea.FormInput {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.FormError {
+  margin: 0;
+  font-size: 13px;
+  color: #b3261e;
+}
+
+.FormMessage {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-dim);
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.Form .btn-tray {
+  margin-top: 12px;
+}
+
+.Form .btn.primary {
+  width: 100%;
+  justify-content: center;
+  background: var(--accent-grad);
+  border-color: var(--accent);
+  font-weight: 500;
+
+  &:hover {
+    background: var(--accent-grad);
+    filter: brightness(1.06);
+  }
+}
+
+@media (max-width: 560px) {
+  .FormTray {
+    grid-template-columns: 1fr;
+  }
+}

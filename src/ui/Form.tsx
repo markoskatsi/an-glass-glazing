@@ -2,6 +2,7 @@ import { Button, ButtonTray } from "./Button";
 import { useForm } from "../hooks/useForm.tsx";
 import { useState } from "react";
 import { Loading } from "./Loading.tsx";
+import "./Form.scss";
 
 export const Form = ({
   children,
@@ -32,10 +33,19 @@ export const Form = ({
       <div className="FormTray">{children}</div>
       {message}
       <ButtonTray>
-        <Button type="submit">
-          {isLoading ? <Loading /> : submitText}
-        </Button>
+        <Button type="submit">{isLoading ? <Loading /> : submitText}</Button>
       </ButtonTray>
+      <p className="FormMessage">
+        Thanks for your enquiry, we'll be in touch soon. Got a photo of the job?{" "}
+        <a
+          href="https://wa.me/07359252329"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Send it over on WhatsApp
+        </a>{" "}
+        to help us quote faster.
+      </p>
     </form>
   );
 };

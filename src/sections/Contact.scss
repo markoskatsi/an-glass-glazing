@@ -1,0 +1,42 @@
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+  text-align: left;
+}
+
+.contact-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-lead {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.contact-alt {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
