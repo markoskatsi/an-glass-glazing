@@ -5,22 +5,32 @@ export const Button = ({
   variant = "primary",
   href,
   onClick,
+  type = "button",
 }: {
   children: React.ReactNode;
   variant?: "primary" | "secondary";
   href?: string;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset";
 }) => {
-  return (
+  const external =
+    href?.startsWith("http") ||
+    href?.startsWith("mailto:") ||
+    href?.startsWith("tel:");
+  return href ? (
     <a
       className={`btn ${variant}`}
       href={href}
-      target={!href ? "_blank" : undefined}
-      rel={!href ? "noopener noreferrer" : undefined}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
       onClick={onClick}
     >
       {children}
     </a>
+  ) : (
+    <button className={`btn ${variant}`} onClick={onClick} type={type}>
+      {children}
+    </button>
   );
 };
 

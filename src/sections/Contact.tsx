@@ -1,27 +1,32 @@
 import { Section } from "../ui/Section";
-import { services } from "../data/services";
 import { useState } from "react";
+import {
+  ContactForm,
+  type ContactRecord,
+} from "../entities/contact/ContactForm.tsx";
+
+const WEB3FORMS_ACCESS_KEY = "d82e17b9-e0fd-4353-8d6e-026fc325cd2c";
 
 export const Contact = () => {
   const [result, setResult] = useState("");
 
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const form = event.currentTarget;
+  const onSubmit = async (data: ContactRecord) => {
     setResult("Sending....");
-    const formData = new FormData(event.currentTarget);
-    formData.append("access_key", "d82e17b9-e0fd-4353-8d6e-026fc325cd2c");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await response.json();
-    if (data.success) {
-      setResult("Submitted successfully!");
-      form.reset();
-    } else {
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          ...data,
+        }),
+      });
+      const json = await response.json();
+      setResult(json.success ? "Sent!" : "Error");
+    } catch {
       setResult("Error");
     }
   };
@@ -34,35 +39,46 @@ export const Contact = () => {
       </p>
       <p>
         Prefer to message? We answer on{" "}
-        <a href="https://www.instagram.com/a.n.glass.glazing/">Instagram</a>,{" "}
-        <a href="https://www.facebook.com/people/ANGlassGlazing/61589756037667/">
+        <a
+          href="https://www.instagram.com/a.n.glass.glazing/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+        ,{" "}
+        <a
+          href="https://www.facebook.com/people/ANGlassGlazing/61589756037667/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Facebook
         </a>{" "}
-        and <a href="https://wa.me/07359252329">WhatsApp</a>.
+        and{" "}
+        <a
+          href="https://wa.me/07359252329"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
+        </a>
+        .
       </p>
-      <form onSubmit={onSubmit}>
-        <input type="text" name="name" placeholder="Your name" required />
-        <input type="email" name="email" placeholder="Your email" required />
-        <input type="tel" name="phone" placeholder="Best number" required />
-        <input type="text" name="postcode" placeholder="e.g. S70" required />
-        <select name="service" defaultValue="" required>
-          <option value="" disabled>
-            Select a service
-          </option>
-          {services.map((service) => (
-            <option key={service.name} value={service.name}>
-              {service.name}
-            </option>
-          ))}
-          <option value="other">Other</option>
-        </select>
-        <textarea
-          name="details"
-          placeholder="Sizes, how many panes, anything useful"
-          required
-        ></textarea>
-        <button type="submit">{result ? result : "Send Enquiry"}</button>
-      </form>
+      <ContactForm
+        onSubmit={onSubmit}
+        submitText={result ? result : "Send Enquiry"}
+        message={
+          result === "Sent!" ? (
+            <p className="FormMessage">
+              Thanks for your enquiry. We'll be in touch soon.
+            </p>
+          ) : result === "Error" ? (
+            <p className="FormError">
+              Sorry, there was an error sending your enquiry. Please try again.
+            </p>
+          ) : null
+        }
+      />
     </Section>
   );
 };
