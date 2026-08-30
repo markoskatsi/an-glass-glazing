@@ -13,10 +13,7 @@ export const Button = ({
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
 }) => {
-  const external =
-    href?.startsWith("http") ||
-    href?.startsWith("mailto:") ||
-    href?.startsWith("tel:");
+  const external = href?.startsWith("http") || href?.startsWith("mailto:");
   return href ? (
     <a
       className={`btn ${variant}`}

@@ -1,0 +1,33 @@
+.about-section {
+  text-align: left;
+  background: var(--bg-light);
+
+  .about-inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 72px 28px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 72px;
+  }
+
+  h2 {
+    margin: 0;
+    font-family: var(--heading);
+    font-size: 53px;
+    line-height: 1.05;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-h);
+
+    span {
+      color: var(--accent);
+    }
+  }
+
+  p {
+    max-width: 34em;
+    color: var(--text);
+  }
+}
