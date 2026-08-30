@@ -99,3 +99,36 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  .landing .landing-inner {
+    gap: 40px;
+    padding: 56px 24px;
+  }
+
+  .landing .landing-media {
+    display: none;
+  }
+
+  .landing h1 {
+    font-size: 42px;
+  }
+
+  .landing .landing-stats {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing h1 {
+    font-size: 34px;
+  }
+
+  .landing .landing-stats {
+    gap: 24px;
+
+    strong {
+      font-size: 22px;
+    }
+  }
+}

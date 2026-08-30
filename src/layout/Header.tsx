@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useLocation } from "react-router";
 import { Button } from "../ui/Button";
 import { Icon } from "../ui/Icon";
@@ -6,6 +7,7 @@ import "./Header.scss";
 
 export const Header = () => {
   const { pathname } = useLocation();
+  const [open, setOpen] = useState(false);
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -28,9 +30,24 @@ export const Header = () => {
     <header>
       <div className="header-inner">
         <Logo />
-        <nav>
+
+        <button
+          type="button"
+          className="nav-toggle"
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          onClick={() => setOpen((prev) => !prev)}
+        >
+          {open ? <Icon.Cross /> : <Icon.Menu />}
+        </button>
+
+        <nav className={open ? "is-open" : ""}>
           {items.map((item) => (
-            <a key={item.name} href={item.href}>
+            <a
+              key={item.name}
+              href={item.href}
+              onClick={() => setOpen(false)}
+            >
               {item.name}
             </a>
           ))}

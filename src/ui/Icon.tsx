@@ -7,6 +7,7 @@ import { IoMdReturnRight } from "react-icons/io";
 import { FaCheck } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import "./Icon.scss";
 
 export const Icon = ({ children }: { children: React.ReactNode }) => {
@@ -49,6 +50,10 @@ function ArrowUp() {
   return <FaArrowUp size={19} />;
 }
 
+function Menu() {
+  return <FaBars size={20} />;
+}
+
 Icon.Call = Call;
 Icon.Mail = Mail;
 Icon.Location = Location;
@@ -58,3 +63,4 @@ Icon.ReturnRight = ReturnRight;
 Icon.Tick = Tick;
 Icon.Cross = Cross;
 Icon.ArrowUp = ArrowUp;
+Icon.Menu = Menu;

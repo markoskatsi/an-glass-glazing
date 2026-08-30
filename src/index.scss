@@ -71,8 +71,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
 body {
   margin: 0;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 main {
@@ -116,4 +119,24 @@ p {
   line-height: 1;
   text-transform: uppercase;
   color: var(--text-h);
+}
+
+@media (max-width: 700px) {
+  .section-inner {
+    padding: 56px 24px;
+  }
+
+  .section-head {
+    margin-bottom: 28px;
+  }
+
+  .section h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section h2 {
+    font-size: 28px;
+  }
 }
