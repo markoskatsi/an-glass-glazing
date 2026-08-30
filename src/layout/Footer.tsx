@@ -35,7 +35,7 @@ export const Footer = () => {
             <li>
               <Icon.Mail />
               <a href="mailto:an.glass.glazing@gmail.com">
-                an.glass.glazing@gmail.com
+                an.glass.glazzing@gmail.com
               </a>
             </li>
             <li>
