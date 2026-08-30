@@ -1,4 +1,3 @@
-import { Section } from "../ui/Section";
 import { useState } from "react";
 import {
   ContactForm,
@@ -33,9 +32,13 @@ export const Contact = () => {
   };
 
   return (
-    <Section id="contact" eyebrow="Get in touch" title="Request a free quote">
-      <div className="contact-grid">
+    <section className="section" id="contact">
+      <div className="section-inner contact-grid">
         <div className="contact-intro">
+          <div className="section-head">
+            <span className="eyebrow">Get in touch</span>
+            <h2>Request a free quote</h2>
+          </div>
           <p className="contact-lead">
             Tell us what needs doing and where you are, and we'll get you a free
             quote.
@@ -86,6 +89,6 @@ export const Contact = () => {
           }
         />
       </div>
-    </Section>
+    </section>
   );
 };

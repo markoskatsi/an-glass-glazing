@@ -10,6 +10,10 @@
   display: flex;
   flex-direction: column;
   gap: 18px;
+
+  .section-head {
+    margin-bottom: 0;
+  }
 }
 
 .contact-lead {

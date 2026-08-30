@@ -9,6 +9,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  .section-head {
+    margin-bottom: 0;
+  }
 }
 
 .why-us-lead {

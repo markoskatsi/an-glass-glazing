@@ -35,17 +35,6 @@ export const Form = ({
       <ButtonTray>
         <Button type="submit">{isLoading ? <Loading /> : submitText}</Button>
       </ButtonTray>
-      <p className="FormMessage">
-        Thanks for your enquiry, we'll be in touch soon. Got a photo of the job?{" "}
-        <a
-          href="https://wa.me/07359252329"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Send it over on WhatsApp
-        </a>{" "}
-        to help us quote faster.
-      </p>
     </form>
   );
 };

@@ -1,4 +1,3 @@
-import { Section } from "../ui/Section";
 import { suppliers } from "../data/suppliers";
 import "./WhyUs.scss";
 
@@ -24,13 +23,13 @@ const reasons = [
 
 export const WhyUs = () => {
   return (
-    <Section
-      id="why-us"
-      eyebrow="Why A&N Glass & Glazing"
-      title="Family run, trusted, and experienced"
-    >
-      <div className="why-us-grid">
+    <section className="section" id="why-us">
+      <div className="section-inner why-us-grid">
         <div className="why-us-intro">
+          <div className="section-head">
+            <span className="eyebrow">Why A&N Glass & Glazing</span>
+            <h2>Family run, trusted, and experienced</h2>
+          </div>
           <p className="why-us-lead">
             A&N is family run. The person who quotes your job is the person who
             measures it and fits it. Nothing is subcontracted out, so nothing
@@ -64,17 +63,17 @@ export const WhyUs = () => {
           </div>
         </div>
         <ul className="why-us-reasons">
-          {reasons.map((reason, index) => (
-            <li key={reason.title} className="why-us-reason">
-              <span className="why-us-reason-number">0{index + 1}</span>
-              <div className="why-us-reason-body">
-                <h3 className="why-us-reason-title">{reason.title}</h3>
-                <p className="why-us-reason-desc">{reason.description}</p>
-              </div>
-            </li>
-          ))}
+        {reasons.map((reason, index) => (
+          <li key={reason.title} className="why-us-reason">
+            <span className="why-us-reason-number">0{index + 1}</span>
+            <div className="why-us-reason-body">
+              <h3 className="why-us-reason-title">{reason.title}</h3>
+              <p className="why-us-reason-desc">{reason.description}</p>
+            </div>
+          </li>
+        ))}
         </ul>
       </div>
-    </Section>
+    </section>
   );
 };

@@ -1,4 +1,3 @@
-import { Section } from "../ui/Section";
 import { Icon } from "../ui/Icon";
 import { ImageGallery } from "react-image-grid-gallery";
 import { Button } from "../ui/Button";
@@ -11,39 +10,45 @@ export const Gallery = () => {
   const [offset, setOffset] = useState(0);
   const currentJobs = jobs.slice(offset, offset + 6);
   return (
-    <Section id="gallery" eyebrow="Recent Jobs" title="Gallery">
-      <a
-        className="gallery-link"
-        href="https://www.instagram.com/a.n.glass.glazing/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        More on Instagram
-        <Icon.ArrowRight />
-      </a>
-      <div className="gallery-grid">
-        <ImageGallery imagesData={currentJobs} columnCount={3} gapSize={16} />
-        {offset > 0 && (
-          <Button
-            variant="secondary"
-            onClick={() => setOffset(Math.max(offset - 6, 0))}
-            href="#gallery"
-          >
-            <Icon.ReturnLeft />
-            Show Less
-          </Button>
-        )}
-        {offset + 6 < jobs.length && (
-          <Button
-            variant="secondary"
-            onClick={() => setOffset(offset + 6)}
-            href="#gallery"
-          >
-            Show More
-            <Icon.ReturnRight />
-          </Button>
-        )}
+    <section className="section" id="gallery">
+      <div className="section-inner">
+        <div className="section-head">
+          <span className="eyebrow">Recent Jobs</span>
+          <h2>Gallery</h2>
+        </div>
+        <a
+          className="gallery-link"
+          href="https://www.instagram.com/a.n.glass.glazing/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          More on Instagram
+          <Icon.ArrowRight />
+        </a>
+        <div className="gallery-grid">
+          <ImageGallery imagesData={currentJobs} columnCount={3} gapSize={16} />
+          {offset > 0 && (
+            <Button
+              variant="secondary"
+              onClick={() => setOffset(Math.max(offset - 6, 0))}
+              href="#gallery"
+            >
+              <Icon.ReturnLeft />
+              Show Less
+            </Button>
+          )}
+          {offset + 6 < jobs.length && (
+            <Button
+              variant="secondary"
+              onClick={() => setOffset(offset + 6)}
+              href="#gallery"
+            >
+              Show More
+              <Icon.ReturnRight />
+            </Button>
+          )}
+        </div>
       </div>
-    </Section>
+    </section>
   );
 };
