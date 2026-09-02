@@ -50,6 +50,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* text */
+    --text: #b7b3ac;
+    --text-h: #f3f2f0;
+    --text-dim: #7d8790;
+    --on-accent: #ffffff;
+
+    /* surfaces */
+    --bg: #131312;
+    --bg-light: #1b1b19;
+    --bg-grey: #161615;
+    --section-grad: linear-gradient(180deg, var(--bg-light), var(--bg-grey));
+    --surface: #1a1a19;
+    --surface-2: #232321;
+    --surface-dark: #0d0d0c;
+    --code-bg: #232321;
+
+    /* lines */
+    --border: #2d2c29;
+    --border-strong: #46433e;
+
+    --accent: #4a9fe0;
+    --accent-deep: #2f80c4;
+    --accent-grad: linear-gradient(180deg, #4a9fe0, #2f80c4);
+    --accent-bg: rgba(74, 159, 224, 0.12);
+    --accent-border: rgba(74, 159, 224, 0.5);
+    --accent-hover: #62aee6;
+
+    --whatsapp: #25c05f;
+
+    /* shape + depth */
+    --shadow: 0 18px 44px rgba(0, 0, 0, 0.5);
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.4);
+
+    color-scheme: dark;
+  }
+}
+
 @media (max-width: 1024px) {
   :root {
     font-size: 16px;

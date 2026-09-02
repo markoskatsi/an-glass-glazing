@@ -1,8 +1,9 @@
 .logo {
   display: block;
-  height: 80px;
+  height: 100px;
   width: auto;
-  background: #000;
+  // background: #000;
+  margin-left: -14px;
   cursor: pointer;
   transition: transform 0.26s ease;
 }
