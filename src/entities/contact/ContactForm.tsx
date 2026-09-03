@@ -3,6 +3,7 @@ import { services } from "../../data/services";
 
 export interface ContactRecord extends Record<string, unknown> {
   name: string;
+  email?: string;
   phone?: string;
   postcode?: string;
   service?: string;
@@ -11,6 +12,7 @@ export interface ContactRecord extends Record<string, unknown> {
 
 const emptyContact: ContactRecord = {
   name: "",
+  email: "",
   phone: "",
   postcode: "",
   service: "",
@@ -31,6 +33,8 @@ export const ContactForm = ({
   const validation = {
     isValid: {
       name: (v: unknown) => typeof v === "string" && v.length > 2,
+      email: (v: unknown) =>
+        typeof v === "string" && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
       phone: (v: unknown) => {
         if (typeof v !== "string") return false;
         const digits = v.replace(/\D/g, "").replace(/^(?:0044|44)/, "0");
@@ -42,6 +46,7 @@ export const ContactForm = ({
     },
     errorMessage: {
       name: "Please provide a valid name",
+      email: "Please provide a valid email address",
       phone: "Please provide a valid phone number",
       postcode: "Please provide a valid postcode",
       details: "Please provide some details about your enquiry",
@@ -68,6 +73,18 @@ export const ContactForm = ({
         />
       </Form.Item>
 
+      <Form.Item label="Email" htmlFor="email" error={errors.email}>
+        <input
+          className="FormInput"
+          type="email"
+          name="email"
+          id="email"
+          autoComplete="email"
+          value={contact.email}
+          onChange={handleChange}
+        />
+      </Form.Item>
+
       <Form.Item label="Phone" htmlFor="phone" error={errors.phone}>
         <input
           className="FormInput"
@@ -90,7 +107,7 @@ export const ContactForm = ({
         />
       </Form.Item>
 
-      <Form.Item label="Service" htmlFor="service" error={errors.service}>
+      <Form.Item label="Service" htmlFor="service" error={errors.service} wide>
         <select
           className="FormInput"
           name="service"
@@ -110,7 +127,7 @@ export const ContactForm = ({
         </select>
       </Form.Item>
 
-      <Form.Item label="Details" htmlFor="details" error={errors.details}>
+      <Form.Item label="Details" htmlFor="details" error={errors.details} wide>
         <textarea
           className="FormInput"
           name="details"

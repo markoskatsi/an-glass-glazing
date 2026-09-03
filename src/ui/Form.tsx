@@ -44,14 +44,16 @@ const Item = ({
   label,
   htmlFor,
   error,
+  wide,
 }: {
   children: React.ReactNode;
   label: string;
   htmlFor: string;
   error?: string | null;
+  wide?: boolean;
 }) => {
   return (
-    <div className="FormItem">
+    <div className={wide ? "FormItem FormItem--wide" : "FormItem"}>
       <label className="FormLabel" htmlFor={htmlFor}>
         {label}
       </label>

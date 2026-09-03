@@ -10,10 +10,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
+}
 
-  > .FormItem:last-child {
-    grid-column: 1 / -1;
-  }
+.FormItem--wide {
+  grid-column: 1 / -1;
 }
 
 .FormItem {
@@ -83,6 +83,7 @@ textarea.FormInput {
 }
 
 .Form .btn.primary {
+  margin-top: 12px;
   width: 100%;
   justify-content: center;
   background: var(--accent-grad);
