@@ -23,12 +23,6 @@ export const sections: GallerySection[] = [
       "Frameless, standoff and post-fixed glass to stairs, landings and stairwell voids.",
     images: [
       {
-        id: "staircase-balustrades/IMG_0080.jpg",
-        src: "/gallery/staircase-balustrades/IMG_0080.jpg",
-        caption: "Stone staircase balustrade",
-        alt: "Frameless glass balustrade with a curved stainless handrail on a stone staircase",
-      },
-      {
         id: "staircase-balustrades/IMG_6084.JPG",
         src: "/gallery/staircase-balustrades/IMG_6084.JPG",
         caption: "Bronze-tinted stair balustrade",
@@ -52,6 +46,12 @@ export const sections: GallerySection[] = [
         caption: "Landing balustrade during fit-out",
         alt: "Glass balustrade running along a galleried landing during fit-out",
       },
+      {
+        id: "staircase-balustrades/IMG_0736.JPG",
+        src: "/gallery/staircase-balustrades/IMG_0736.JPG",
+        caption: "Curved staircase balustrade",
+        alt: "Curved frameless glass balustrade",
+      },
     ],
   },
   {
@@ -64,8 +64,8 @@ export const sections: GallerySection[] = [
       {
         id: "terrace-balustrades/IMG_1617.jpeg",
         src: "/gallery/terrace-balustrades/IMG_1617.jpeg",
-        caption: "The City Ground — Nottingham Forest",
-        alt: "Long run of frameless glass balustrade between tiers of red stadium seating",
+        caption: "The City Ground, Nottingham Forest",
+        alt: "Long run of frameless glass balustrade",
       },
       {
         id: "terrace-balustrades/IMG_1615.jpeg",
@@ -73,12 +73,7 @@ export const sections: GallerySection[] = [
         caption: "Etched stadium balustrade",
         alt: "Glass stadium balustrade with the Nottingham Forest name etched into the panel",
       },
-      {
-        id: "terrace-balustrades/IMG_1603.jpeg",
-        src: "/gallery/terrace-balustrades/IMG_1603.jpeg",
-        caption: "Stadium seating balustrade",
-        alt: "Stainless-capped glass balustrade fronting a row of stadium seats",
-      },
+
       {
         id: "terrace-balustrades/IMG_1611.jpeg",
         src: "/gallery/terrace-balustrades/IMG_1611.jpeg",
@@ -90,12 +85,6 @@ export const sections: GallerySection[] = [
         src: "/gallery/terrace-balustrades/IMG_1250.jpeg",
         caption: "Executive box balustrade",
         alt: "Glass balustrade to an executive box overlooking the pitch during ground works",
-      },
-      {
-        id: "terrace-balustrades/IMG_1546.jpeg",
-        src: "/gallery/terrace-balustrades/IMG_1546.jpeg",
-        caption: "Stadium balustrade run",
-        alt: "Frameless glass balustrade running along a stand of red stadium seats",
       },
       {
         id: "terrace-balustrades/IMG_6164.jpeg",
@@ -124,20 +113,14 @@ export const sections: GallerySection[] = [
       {
         id: "terrace-balustrades/IMG_6242.jpeg",
         src: "/gallery/terrace-balustrades/IMG_6242.jpeg",
-        caption: "Garden balustrade — build stage",
-        alt: "Stainless posts and glass balustrade to a sandstone patio under construction",
+        caption: "Garden balustrade, build stage",
+        alt: "Stainless posts and glass balustrade",
       },
       {
         id: "terrace-balustrades/IMG_6238.jpeg",
         src: "/gallery/terrace-balustrades/IMG_6238.jpeg",
         caption: "Post-fixed garden balustrade",
         alt: "Stainless post and glass balustrade being set out on a new sandstone patio",
-      },
-      {
-        id: "terrace-balustrades/IMG_6295.jpeg",
-        src: "/gallery/terrace-balustrades/IMG_6295.jpeg",
-        caption: "Garden patio balustrade",
-        alt: "Glass balustrade with stainless posts along the edge of a raised garden patio",
       },
       {
         id: "terrace-balustrades/IMG_6250.jpeg",
@@ -161,10 +144,16 @@ export const sections: GallerySection[] = [
       "Walk-in enclosures, hinged and sliding doors, wet room screens and over-bath screens.",
     images: [
       {
+        id: "showers/IMG_0080.jpg",
+        src: "/gallery/showers/IMG_0080.jpg",
+        caption: "Corner shower enclosure",
+        alt: "Frameless corner glass shower enclosure with a hinged door",
+      },
+      {
         id: "showers/IMG_2878.JPG",
         src: "/gallery/showers/IMG_2878.JPG",
-        caption: "Walk-in shower with a view",
-        alt: "Frameless walk-in glass shower enclosure beside a full-height window with a view",
+        caption: "Walk-in shower",
+        alt: "Frameless walk-in glass shower enclosure beside a full-height window",
       },
       {
         id: "showers/IMG_4389.JPG",
@@ -175,8 +164,8 @@ export const sections: GallerySection[] = [
       {
         id: "showers/IMG_0960.JPG",
         src: "/gallery/showers/IMG_0960.JPG",
-        caption: "Corner enclosure, marble bathroom",
-        alt: "Frameless corner shower enclosure with a hinged glass door in a marble bathroom",
+        caption: "Corner enclosure",
+        alt: "Frameless corner shower enclosure with a hinged glass door",
       },
       {
         id: "showers/ili 063.jpg",
@@ -189,12 +178,6 @@ export const sections: GallerySection[] = [
         src: "/gallery/showers/20140430_141609.jpg",
         caption: "Walk-in steam enclosure",
         alt: "Large walk-in glass steam enclosure with sliding doors and dark shower panels",
-      },
-      {
-        id: "showers/20140430_141605.jpg",
-        src: "/gallery/showers/20140430_141605.jpg",
-        caption: "Steam room enclosure",
-        alt: "Glass steam room enclosure spanning a tiled bathroom recess",
       },
       {
         id: "showers/20140430_141635.jpg",
@@ -323,12 +306,6 @@ export const sections: GallerySection[] = [
         src: "/gallery/partitions/IMG_0735.JPG",
         caption: "Glass shelving",
         alt: "Toughened glass shelving on stainless brackets",
-      },
-      {
-        id: "partitions/IMG_0736.JPG",
-        src: "/gallery/partitions/IMG_0736.JPG",
-        caption: "Glass shelves & mirror",
-        alt: "Glass shelving beside a round mirror in a fitted interior",
       },
     ],
   },
