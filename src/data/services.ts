@@ -30,6 +30,11 @@ export const services: Service[] = [
       "Toughened and laminated glass where regulations or common sense call for it: doors, low panes and stairs.",
   },
   {
+    name: "Security & anti-vandal film",
+    description:
+      "Clear high-strength film bonded to your existing glass. Holds a smashed pane together and slows forced entry, no need to replace the glass.",
+  },
+  {
     name: "Mirrors supplied & fitted",
     description:
       "Mirrors cut to size with polished edges, fitted flat and level on any wall.",
