@@ -57,9 +57,9 @@ export const sections: GallerySection[] = [
   {
     id: "terrace-balustrades",
     label: "Terrace, balcony & garden balustrades",
-    short: "Terraces & gardens",
+    short: "Balustrades",
     blurb:
-      "Outdoor frameless glass for terraces, balconies, gardens, roof terraces and stadium seating.",
+      "Frameless, standoff and post-fixed glass balustrades for terraces, balconies, gardens, roof terraces and stadium seating.",
     images: [
       {
         id: "terrace-balustrades/IMG_1617.jpeg",
@@ -133,6 +133,12 @@ export const sections: GallerySection[] = [
         src: "/gallery/terrace-balustrades/P4260405.JPG",
         caption: "Rooftop terrace balustrade",
         alt: "Frameless glass balustrade fixed to a rendered roof terrace parapet against the sky",
+      },
+      {
+        id: "terrace-balustrades/CAM00281.jpg",
+        src: "/gallery/terrace-balustrades/CAM00281.jpg",
+        caption: "Frosted glass balustrade",
+        alt: "Frosted toughened glass balustrade panels on stainless steel standoff fixings",
       },
     ],
   },
@@ -267,12 +273,6 @@ export const sections: GallerySection[] = [
         src: "/gallery/glass-doors/diafora 006.jpg",
         caption: "Tinted glass kitchen door",
         alt: "Green-tinted sandblasted frameless glass door into a kitchen",
-      },
-      {
-        id: "glass-doors/CAM00281.jpg",
-        src: "/gallery/glass-doors/CAM00281.jpg",
-        caption: "Frosted utility door",
-        alt: "Sandblasted frameless glass door to a utility area",
       },
     ],
   },
