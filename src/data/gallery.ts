@@ -43,7 +43,7 @@ export const sections: GallerySection[] = [
       {
         id: "staircase-balustrades/CAM00272.jpg",
         src: "/gallery/staircase-balustrades/CAM00272.jpg",
-        caption: "Landing balustrade during fit-out",
+        caption: "Galleried landing balustrade",
         alt: "Glass balustrade running along a galleried landing during fit-out",
       },
       {
@@ -70,20 +70,20 @@ export const sections: GallerySection[] = [
       {
         id: "terrace-balustrades/IMG_1615.jpeg",
         src: "/gallery/terrace-balustrades/IMG_1615.jpeg",
-        caption: "Etched stadium balustrade",
+        caption: "The City Ground, Nottingham Forest",
         alt: "Glass stadium balustrade with the Nottingham Forest name etched into the panel",
       },
 
       {
         id: "terrace-balustrades/IMG_1611.jpeg",
         src: "/gallery/terrace-balustrades/IMG_1611.jpeg",
-        caption: "Pitchside glass balustrade",
+        caption: "The City Ground, Nottingham Forest",
         alt: "Frameless glass balustrade at pitch level beside the dugouts",
       },
       {
         id: "terrace-balustrades/IMG_1250.jpeg",
         src: "/gallery/terrace-balustrades/IMG_1250.jpeg",
-        caption: "Executive box balustrade",
+        caption: "The City Ground, Nottingham Forest",
         alt: "Glass balustrade to an executive box overlooking the pitch during ground works",
       },
       {
@@ -95,25 +95,25 @@ export const sections: GallerySection[] = [
       {
         id: "terrace-balustrades/IMG_6162.jpeg",
         src: "/gallery/terrace-balustrades/IMG_6162.jpeg",
-        caption: "Garden terrace divider",
+        caption: "Split-level garden balustrade",
         alt: "Glass balustrade dividing a raised patio from a lower seating terrace",
       },
       {
         id: "terrace-balustrades/IMG_6168.jpeg",
         src: "/gallery/terrace-balustrades/IMG_6168.jpeg",
-        caption: "Landscaped garden balustrade",
+        caption: "Split-level garden balustrade",
         alt: "Glass balustrade running the length of a landscaped garden terrace",
       },
       {
         id: "terrace-balustrades/IMG_6169.jpeg",
         src: "/gallery/terrace-balustrades/IMG_6169.jpeg",
-        caption: "Stepped garden balustrade",
+        caption: "Split-level garden balustrade",
         alt: "Stepped frameless glass balustrade beside stone garden steps",
       },
       {
         id: "terrace-balustrades/IMG_6242.jpeg",
         src: "/gallery/terrace-balustrades/IMG_6242.jpeg",
-        caption: "Garden balustrade, build stage",
+        caption: "Post-fixed garden balustrade",
         alt: "Stainless posts and glass balustrade",
       },
       {
@@ -125,7 +125,7 @@ export const sections: GallerySection[] = [
       {
         id: "terrace-balustrades/IMG_6250.jpeg",
         src: "/gallery/terrace-balustrades/IMG_6250.jpeg",
-        caption: "Garden balustrade progress",
+        caption: "Post-fixed garden balustrade",
         alt: "Stainless posts awaiting glass infill panels along a garden patio edge",
       },
       {
@@ -164,13 +164,13 @@ export const sections: GallerySection[] = [
       {
         id: "showers/IMG_0960.JPG",
         src: "/gallery/showers/IMG_0960.JPG",
-        caption: "Corner enclosure",
+        caption: "Marble corner shower enclosure",
         alt: "Frameless corner shower enclosure with a hinged glass door",
       },
       {
         id: "showers/ili 063.jpg",
         src: "/gallery/showers/ili 063.jpg",
-        caption: "Corner shower enclosure",
+        caption: "Marble corner shower enclosure",
         alt: "Frameless corner shower enclosure with a hinged glass door and stone tray",
       },
       {
@@ -182,7 +182,7 @@ export const sections: GallerySection[] = [
       {
         id: "showers/20140430_141635.jpg",
         src: "/gallery/showers/20140430_141635.jpg",
-        caption: "Sliding steam enclosure doors",
+        caption: "Walk-in steam enclosure",
         alt: "Sliding glass doors with sandblasted lower panels on a steam enclosure",
       },
       {
@@ -221,7 +221,7 @@ export const sections: GallerySection[] = [
       {
         id: "splashbacks/IMG_0858.JPG",
         src: "/gallery/splashbacks/IMG_0858.JPG",
-        caption: "Splashback behind the hob",
+        caption: "Grey glass kitchen splashback",
         alt: "Grey glass splashback wrapping the corner behind a kitchen extractor",
       },
       {
@@ -286,13 +286,13 @@ export const sections: GallerySection[] = [
       {
         id: "partitions/IMG_4864.JPG",
         src: "/gallery/partitions/IMG_4864.JPG",
-        caption: "Manifestation glass partition",
+        caption: "Corridor manifestation partition",
         alt: "Full-height frameless glass partition with a graduated frosted stripe pattern",
       },
       {
         id: "partitions/IMG_4866.JPG",
         src: "/gallery/partitions/IMG_4866.JPG",
-        caption: "Glazed corridor partition",
+        caption: "Corridor manifestation partition",
         alt: "Glazed corridor partition with frosted manifestation stripes catching the light",
       },
       {
