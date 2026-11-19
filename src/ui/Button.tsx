@@ -8,7 +8,7 @@ export const Button = ({
   type = "button",
 }: {
   children: React.ReactNode;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "review";
   href?: string;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";

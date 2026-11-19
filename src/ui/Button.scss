@@ -57,4 +57,15 @@
       border-color: var(--accent);
     }
   }
+
+  &.review {
+    background: var(--review);
+    color: var(--on-review);
+    border-color: var(--review);
+
+    &:hover {
+      background: var(--review-hover);
+      border-color: var(--review-hover);
+    }
+  }
 }

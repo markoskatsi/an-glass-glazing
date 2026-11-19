@@ -1,5 +1,6 @@
 import HeroImage from "../assets/hero.jpeg";
 import { Button, ButtonTray } from "../ui/Button";
+import { Icon } from "../ui/Icon";
 import "./Landing.scss";
 
 const stats = [
@@ -29,6 +30,13 @@ export const Landing = () => {
             <Button href="/#contact">Request a Free Quote</Button>
             <Button variant="secondary" href="/#gallery">
               View Gallery
+            </Button>
+            <Button
+              variant="review"
+              href="https://g.page/r/CYh2AkkqjyPxEBM/review"
+            >
+              <Icon.Star />
+              Leave a Review
             </Button>
           </ButtonTray>
           <ul className="landing-stats">

@@ -42,6 +42,16 @@ export const Footer = () => {
               <Icon.Location />
               <span>Barnsley, South Yorkshire, UK</span>
             </li>
+            <li>
+              <Icon.Star />
+              <a
+                href="https://g.page/r/CYh2AkkqjyPxEBM/review"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Leave us a review
+              </a>
+            </li>
           </ul>
         </div>
       </div>
